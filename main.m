@@ -2,19 +2,18 @@
 //  main.m
 //  Calculator
 //
-//  Created by Yevgeniya on 9/29/20.
+//  Created by user181988 on 10/5/20.
+//  Copyright © 2020 Yevgeniya Anasheva. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "Calculator_Brain.h"
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, char * argv[]) {
+    NSString * appDelegateClassName;
     @autoreleasepool {
-        Calculator_Brain *cb = [[Calculator_Brain alloc]init];
-        [cb pushItem:2.1];
-        [cb pushItem:1.5];
-        double sum = [cb calculate:@"+"];
-        NSLog(@"The sum is %f", sum);
+        // Setup code that might create autoreleased objects goes here.
+        appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
-    return 0;
+    return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }

@@ -26,20 +26,22 @@
 }
 
 -(double) calculate: (NSString *) operation{
-    double result = 0;
+    double num2 = [self popItem];
+    double num1 = [self popItem];
+
     if([operation isEqualToString:@"+"]){
-        result = [self popItem] + [self popItem];
+        return num1 + num2;
     }
     else if ([operation isEqualToString:@"-"]){
-        result = [self popItem] - [self popItem];
+        return num1 - num2;
     }
     else if ([operation isEqualToString:@"/"]){
-        result = [self popItem] / [self popItem];
+        return num1 / num2;
     }
     else if ([operation isEqualToString:@"*"]){
-        result = [self popItem] * [self popItem];
+        return num1 * num2;
     }
-    return result;
+    return 0;
 }
 
 -(double)popItem{
